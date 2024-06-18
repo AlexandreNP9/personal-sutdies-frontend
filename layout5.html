@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    from this video
+    https://www.youtube.com/watch?v=sSkmBxsaJWg
+-->
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 3px;
+            flex: 1 1 100vw;
+            background: #a1a1a1;
+        }
+
+        header,
+        nav,
+        main,
+        aside,
+        footer {
+            background-color: #a1a1a1;
+            display: flex;
+            margin: 3px;
+        }
+
+        header {
+            flex: 1 1 100vw;
+            height: 100px;
+        }
+
+        header #logo {
+            flex: 0 1 200px;
+            background: #c9c9c9;
+        }
+
+        #openMenu,
+        #closeMenu {
+            border: none;
+            background: none;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 0px 5px 0px 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        nav {
+            flex: 1 1 100vw;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            margin: 3%;
+            font-size: 20pt;
+        }
+
+        main {
+            flex: 20 1 500px;
+            flex-wrap: wrap;
+            overflow: auto;
+        }
+
+        main section {
+            width: 100%;
+            height: 2000px;
+            margin: 10px;
+            background: linear-gradient(#9a9a9a, #5a5a5a, #1a1a1a);
+        }
+
+        aside {
+            flex: 1 1 200px;
+        }
+
+        footer {
+            flex: 1 1 100vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media only screen and (max-width: 923px) {
+            header {
+                order: 0;
+            }
+
+            main {
+                order: 1;
+            }
+
+            aside {
+                flex: 1 1 100vw;
+                order: 2; 
+            }
+
+            footer {
+                order: 3;
+            }
+        }
+
+        @media only screen and (max-width: 717px) {
+
+            #openMenu,
+            #closeMenu {
+                display: block;
+            }
+
+            #openMenu {
+                margin-left: auto;
+            }
+
+            #closeMenu {
+                position: fixed;
+                right: 15px;
+                top: 15px;
+            }
+
+            nav {
+                position: fixed;
+                flex-direction: column;
+                width: 100vw;
+                background: rgba(255, 255, 255, 0.8);
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                display: none;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" id="logo">LOGO</a>
+
+        <button id="openMenu">&#9776;</button>
+
+        <nav id="menu">
+            <button id="closeMenu">X</button>
+            <a href="#">Início</a>
+            <a href="#">Produtos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <aside>Relacionados</aside>
+
+    <main>
+        <h1>Principal</h1>
+        <section></section>
+    </main>
+
+    <footer>Rodapé</footer>
+
+    <script>
+        openMenu.addEventListener('click', () => {
+            menu.style.display = 'flex'
+
+            menu.style.right = (menu.offsetWidth * -1) + 'px'
+
+            openMenu.style.display = 'none'
+
+            setTimeout(() => {
+                menu.style.opacity = '1'
+
+                menu.style.right = '0'
+            }, 10)
+        })
+
+        closeMenu.addEventListener('click', () => {
+            menu.style.opacity = '0'
+
+            menu.style.right = (menu.offsetWidth * -1) + 'px'
+
+            setTimeout(() => {
+                menu.removeAttribute('style')
+                openMenu.removeAttribute('style')
+            }, 200)
+            
+        })
+    </script>
+
+</body>
+
+</html>
