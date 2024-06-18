@@ -1,5 +1,7 @@
 # personal-sutdies
-Repository for personal studies.
+https://www.youtube.com/watch?v=sSkmBxsaJWg
+Rodrigo M.S.
+Acessado em 18/06/2024 23:56
 
 ==> layout1.html
 cria a estrutura básica e utilização de flexbox
