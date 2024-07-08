@@ -1,31 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrótica</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!--aceita caracteres especiais-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!--renderiza a página para ser visualizada em diferentes versões de navegadores-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--como ajustar a largura em função da tela do dispositivo-->
+    <title>Carinho de compras</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <div class="logo">
-            <img src="agrotica.jpg" alt="Logo">
-        </div>
-        <div class="titulo">
-            <h1>Agrótica</h1>
-        </div>
-        <input type="checkbox" id="menuToggle">
-        <label for="menuToggle" class="hamburger">&#9776;</label>
-        <nav class="menu">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="#login">Login</a>
-        </nav>
-    </header>
-</body>
+    <main>
+        <h1>Carrinho de compras</h1>
 
+        <section> <!--seção da tabela-->
+            <table>
+                <thead> <!--cabeçalho da tabela-->
+                    <tr>
+                        <th>Imagem</th>
+                        <th>Produto</th>
+                        <th>Unitário</th>
+                        <th>Total</th>
+                        <th>Quantidade</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+
+                <tbody> <!--dados da tabela-->
+                    <tr>
+                        <td>
+                            <figure class="center">
+                                <img src="https://cdn.pixabay.com/photo/2018/12/22/03/27/smart-tv-3889141_1280.png" alt="Smart TV 42 polegadas" style="width: 50px; height: auto;">
+                            </figure>
+                        </td>
+
+                        <td>Smart TV 42"</td>
+
+                        <td>R$ 1739,00</td>
+
+                        <td>R$ 1739,00</td>
+
+                        <td class="center">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </td>
+
+                        <td>
+                            <button class="material-symbols-outlined">
+                                delete
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section> <!--seção da finalização de compra-->
+            <div class="center"> <!--seção para a quantidade e o valor total-->
+                <table>
+                    <tr>
+                        <td>Total Itens:</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>Total Preço:</td>
+                        <td>R$ 1739,00</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="center"> <!--seção para o botão de confirmação-->
+                <button>Finalizar compra</button>
+            </div>
+        </section>
+    </main>
+    <script src="srcipt.js"></script>
+</body>
 </html>

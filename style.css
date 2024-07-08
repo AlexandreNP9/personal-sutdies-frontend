@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+:root {
+    --color-table-header: #2263f4;
+    --color-table-header-font: #fff;
+
+    --color-table: #fff;
+    --color-table-font: #000;
+}
+
+* { /*remove estilização padrão dos navegadores, pois pode ser diferente nos navegadores*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.center { /*elemetnos da classe: figure, divs da seção de finalização*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body { /*corpo*/
+    background-color: var(--color-table);
+    color: var(--color-table-font);
+}
+
+main h1 { /*estilização do elemento h1, que está dentro da main*/
+    background: var(--color-table-header);
+    width: 100%;
+    height: 25px;
+
+    font-size: 15pt;
+    text-align: center;
+    color: var(--color-table-header-font);
+}
+
+section:nth-child(2) { /*seleciona o section de seção de tabela, pois o nth-child(1) é o h1*/
+    height: 80vh;
+    overflow-y: auto; /*eixo y ativará a barra de rolagem automaticamente no zoom do hover da tr*/
+    overflow-x: hidden; /*a barra do eixo x permanece oculta no zoom do hover na tr*/
+}
+
+section:nth-child(2) table { /*estilização do elemento table, que está dentro da section seção de tabela [section:nth-child(2)]*/
+    border-collapse: collapse;
+    white-space: nowrap;
+    width: 100%;
+    height: 8vh;
+}
+
+thead tr { /*linhas do cabeçalho*/
+    background-color: var(--color-table-header);
+    color: var(--color-table-header-font);
+}
+
+thead th { /*células do cabeçalho*/ 
+    padding: 8px;
+}
+
+tbody tr { /*linhas do corpo da tabela*/
+    transition: 0.2s;
+}
+
+tbody tr:hover { /*mouse sobre as linhas do corpo da tabela*/
+    transform: scale(1.02);
+    box-shadow: 3px 3px 10px 3px #dddddd;;
+}
+
+section:nth-child(2) tbody td { /*células da linha da tabela*/ /*especifica a criação da margem apenas na primeira tabela, por conta da visualização nos disposivitos móveis */
+    padding: 20px 60px;
+}
+
+span { /*span da célula quantidade*/
+    padding: 0px 20px;
+}
+
+button { /*todos os botões da página*/
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*navegadores que tem o webkit (Safari, Chorme, Opera) tem essa propriedade para quando um elemento é tocado em dispositivos sensíveis ao toque*/
+}
+
+td:nth-child(5) button { /*botões na coluna "Quantidade"*/
+    width: 40px;
+    font-size: 20pt;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-table-header);
+    transition: 0.3s; /*transição mais suave quando clicar nos botões da coluca "Quantidade"*/
+}
+
+td:nth-child(5) button:active { /*botões na coluna "Quantidade" quando receber click*/
+    background: var(--color-table-header);
+    color: var(--color-table-header-font);
+}
+
+td:last-child button {
+    color: #ff0000;
+    width: 100%;
+}
+
+section:nth-child(3) { /*seção de finalização. É o nth-child(3) pois é o 3º filho da main*/
+    width: 100%;
+    height: calc(20vh - 25px);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section:nth-child(3) div { /*divs da seção de finalização*/
+    flex: 1 1 250px; /*atalho para flex-grow flex-shrink flwx-base*/
+}
+
+section:nth-child(3) td:first-child { /*encontrar a primeira coluna da tabela de finalização*/
+    text-align: right;
+    padding-right: 5px;
+}
+
+section:nth-child(3) td:nth-child(2) { /*segunda coluna da tabela de finalização*/
+    font-weight: bold;
+}
+
+div:nth-child(2) button { /*botões da segunda divisão*/
+    background-color: var(--color-table-header);
+    color: var(--color-table-header-font);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+}
