@@ -8,3 +8,6 @@ Branches:
 
 ==> header-responsivo-semJS
 a responsible header with no JavaScript code
+
+==> tabela-responsiva-JS-DOM
+shopping cart for an e-commerce site using JavaScript for data manipulation, and a responsible styling
