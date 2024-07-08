@@ -1,6 +1,4 @@
-# personal-sutdies
-Repository for personal studies.
-Focus in front end development (HTML, CSS, JavaScript, UI/UX)
+# exemplo-header-responsivo
 
-==> branch web-development
-5 layouts for study in styling with flexbox
+Exemplo de header responsivo sem utilizar JavaScript
+Código base do ChatGPT, porém analisado porque veio com vários erros.
