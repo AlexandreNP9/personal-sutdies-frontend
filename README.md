@@ -19,4 +19,4 @@ menu hamburguer com comportamento alterado por javascript
 order na responsividade 
 
 ==> layout5-bonus.html
-arquivos organizados, e estilização do scroll bar
+arquivos organizados, e estilização do scroll bar.
