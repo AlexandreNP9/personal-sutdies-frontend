@@ -26,32 +26,8 @@
                     </tr>
                 </thead>
 
-                <tbody> <!--dados da tabela-->
-                    <tr class="products-table__row">
-                        <td class="products-table__cell">
-                            <figure class="products-table__figure center">
-                                <img class="figure__image" src="https://cdn.pixabay.com/photo/2018/12/22/03/27/smart-tv-3889141_1280.png" alt="Smart TV 42 polegadas">
-                            </figure>
-                        </td>
-
-                        <td class="products-table__cell">Smart TV 42"</td>
-
-                        <td class="products-table__cell">R$ 1739,00</td>
-
-                        <td class="products-table__cell">R$ 1739,00</td>
-
-                        <td class="products-table__cell" class="center">
-                            <button class="products-table__button button--decrement">-</button>
-                            <span class="products-table__quantity">1</span>
-                            <button class="products-table__button button--increment">+</button>
-                        </td>
-
-                        <td class="products-table__cell">
-                            <button class="products-table__button button--delete material-symbols-outlined">
-                                delete
-                            </button>
-                        </td>
-                    </tr>
+                <tbody class="products-table__tbody"> <!--dados da tabela-->
+                    
                 </tbody>
             </table>
         </section>
@@ -61,12 +37,12 @@
                 <table class="total__table">
                     <tr>
                         <td class="total-table__label">Total Itens:</td>
-                        <td class="total-table__value">1</td>
+                        <td class="total-table__value" id="total-quantity"></td>
                     </tr>
 
                     <tr>
                         <td class="total-table__label">Total Preço:</td>
-                        <td class="total-table__value">R$ 1739,00</td>
+                        <td class="total-table__value" id="total-price"></td>
                     </tr>
                 </table>
             </div>

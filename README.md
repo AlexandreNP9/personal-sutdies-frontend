@@ -22,3 +22,4 @@ Acessado em 08 de julho de 2024, 09:50
 
 08 JUL 2024: estudei até 18:28. Continuar a partir daqui  
 09 JUL 2024: estudei até 25:19. Continuar a partir daqui  
+10 JUL 2024: estudei até 39:27. Continuar a partir daqui  
