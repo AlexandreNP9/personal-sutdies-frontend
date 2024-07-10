@@ -3,7 +3,7 @@
 Here I store some codes I've seen on Youtube/Instagram. I organize them in branches.
 
 Branches:  
-==> tabela-responsiva-JS_DOM  
+==> tabela-responsiva-JS-DOM  
 studies in a responsible table for an online chart in an e-commerce business. Manipulation with JavaScript, styling in CSS using the international standard BEM
 
 ==> header-responsivo-semJS  
