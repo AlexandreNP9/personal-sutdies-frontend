@@ -11,43 +11,43 @@
 </head>
 <body>
     <main>
-        <h1>Carrinho de compras</h1>
+        <h1 class="main__title">Carrinho de compras</h1>
 
-        <section> <!--seção da tabela-->
-            <table>
+        <section class="main__products"> <!--seção da tabela-->
+            <table class="products__table">
                 <thead> <!--cabeçalho da tabela-->
-                    <tr>
-                        <th>Imagem</th>
-                        <th>Produto</th>
-                        <th>Unitário</th>
-                        <th>Total</th>
-                        <th>Quantidade</th>
-                        <th>Remover</th>
+                    <tr class="products-table__header">
+                        <th class="products-header__cell">Imagem</th>
+                        <th class="products-header__cell">Produto</th>
+                        <th class="products-header__cell">Unitário</th>
+                        <th class="products-header__cell">Total</th>
+                        <th class="products-header__cell">Quantidade</th>
+                        <th class="products-header__cell">Remover</th>
                     </tr>
                 </thead>
 
                 <tbody> <!--dados da tabela-->
-                    <tr>
-                        <td>
-                            <figure class="center">
-                                <img src="https://cdn.pixabay.com/photo/2018/12/22/03/27/smart-tv-3889141_1280.png" alt="Smart TV 42 polegadas" style="width: 50px; height: auto;">
+                    <tr class="products-table__row">
+                        <td class="products-table__cell">
+                            <figure class="products-table__figure center">
+                                <img class="girue__image" src="https://cdn.pixabay.com/photo/2018/12/22/03/27/smart-tv-3889141_1280.png" alt="Smart TV 42 polegadas">
                             </figure>
                         </td>
 
-                        <td>Smart TV 42"</td>
+                        <td class="products-table__cell">Smart TV 42"</td>
 
-                        <td>R$ 1739,00</td>
+                        <td class="products-table__cell">R$ 1739,00</td>
 
-                        <td>R$ 1739,00</td>
+                        <td class="products-table__cell">R$ 1739,00</td>
 
-                        <td class="center">
-                            <button>-</button>
-                            <span>1</span>
-                            <button>+</button>
+                        <td class="products-table__cell" class="center">
+                            <button class="products-table__button button--decrement">-</button>
+                            <span class="products-table__quantity">1</span>
+                            <button class="products-table__button button--increment">+</button>
                         </td>
 
-                        <td>
-                            <button class="material-symbols-outlined">
+                        <td class="products-table__cell">
+                            <button class="products-table__button material-symbols-outlined">
                                 delete
                             </button>
                         </td>
@@ -56,23 +56,23 @@
             </table>
         </section>
 
-        <section> <!--seção da finalização de compra-->
-            <div class="center"> <!--seção para a quantidade e o valor total-->
-                <table>
+       <section class="main_finish"> <!--seção da finalização de compra-->
+            <div class="finish__total center"> <!--seção para a quantidade e o valor total-->
+                <table class="total__table">
                     <tr>
-                        <td>Total Itens:</td>
-                        <td>1</td>
+                        <td class="total-table__label">Total Itens:</td>
+                        <td class="total-table__value">1</td>
                     </tr>
 
                     <tr>
-                        <td>Total Preço:</td>
-                        <td>R$ 1739,00</td>
+                        <td class="total-table__label">Total Preço:</td>
+                        <td class="total-table__value">R$ 1739,00</td>
                     </tr>
                 </table>
             </div>
 
-            <div class="center"> <!--seção para o botão de confirmação-->
-                <button>Finalizar compra</button>
+            <div class="finish__send center"> <!--seção para o botão de confirmação-->
+                <button class="send__button">Finalizar compra</button>
             </div>
         </section>
     </main>
