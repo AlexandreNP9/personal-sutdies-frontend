@@ -2,7 +2,7 @@
 
 Here I store some codes I've seen on Youtube/Instagram. I organize them in branches.
 
-Branches:
+Branches:  
 ==> tabela-responsiva-JS_DOM
 studies in a responsible table for an online chart in an e-commerce business. Manipulation with JavaScript, styling in CSS using the international standard BEM
 
