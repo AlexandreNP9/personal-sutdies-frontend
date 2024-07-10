@@ -148,3 +148,19 @@ body { /*corpo*/
 .send__button:active {
     background: var(--color-button-send-click);
 }
+
+@media only screen and (max-width: 1000px) {
+    .main__products {
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .send__button {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 0;
+    }
+}
