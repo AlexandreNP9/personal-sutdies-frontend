@@ -8,6 +8,8 @@
 
     --color-table: #fff;
     --color-table-font: #000;
+
+    --color-button-send-click: #004ff8;
 }
 
 * { /*remove estilização padrão dos navegadores, pois pode ser diferente nos navegadores*/
@@ -17,7 +19,7 @@
     font-family: "Ubuntu", sans-serif;
 }
 
-.center { /*elemetnos da classe: figure, divs da seção de finalização*/
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +66,7 @@ body { /*corpo*/
     transition: 0.2s;
 }
 
-.products-table__row:hover { /*mouse sobre as linhas do corpo da tabela*/
+.products-table__row:hover {
     transform: scale(1.02);
     box-shadow: 3px 3px 10px 3px #dddddd;;
 }
@@ -102,41 +104,47 @@ body { /*corpo*/
     transition: 0.3s; /*transição mais suave quando clicar nos botões da coluca "Quantidade"*/
 }
 
-td:nth-child(5) button:active { /*botões na coluna "Quantidade" quando receber click*/
+.button--increment:active,
+.button--decrement:active {
     background: var(--color-table-header);
     color: var(--color-table-header-font);
 }
 
-td:last-child button {
+.button--delete {
     color: #ff0000;
     width: 100%;
 }
 
-section:nth-child(3) { /*seção de finalização. É o nth-child(3) pois é o 3º filho da main*/
+.main__finish {
     width: 100%;
     height: calc(20vh - 25px);
     display: flex;
     flex-wrap: wrap;
 }
 
-section:nth-child(3) div { /*divs da seção de finalização*/
+.finish__total,
+.finish__send {
     flex: 1 1 250px; /*atalho para flex-grow flex-shrink flwx-base*/
 }
 
-section:nth-child(3) td:first-child { /*encontrar a primeira coluna da tabela de finalização*/
+.total-table__label {
     text-align: right;
     padding-right: 5px;
 }
 
-section:nth-child(3) td:nth-child(2) { /*segunda coluna da tabela de finalização*/
+.total-table__value  {
     font-weight: bold;
 }
 
-div:nth-child(2) button { /*botões da segunda divisão*/
+.send__button {
     background-color: var(--color-table-header);
     color: var(--color-table-header-font);
     border-radius: 5px;
     font-weight: bold;
     font-size: 18px;
     padding: 20px;
+}
+
+.send__button:active {
+    background: var(--color-button-send-click);
 }
