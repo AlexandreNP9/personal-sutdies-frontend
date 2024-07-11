@@ -97,6 +97,9 @@ function addProducts() {
             const increaseButton = tr.querySelector('.button--increment');
             increaseButton.addEventListener('click', increaseQuantity);
 
+            const reduceButton = tr.querySelector('.button--decrement');
+            reduceButton.addEventListener('click', reduceQuantity);
+
             const deleteButton = tr.querySelector('.button--delete');
             deleteButton.addEventListener('click', removeProduct);
         });
@@ -104,6 +107,39 @@ function addProducts() {
         updateTotals();
     });
 };
+
+//Função para reduzir a quantidade de produtos.
+function reduceQuantity(event) {
+    const tr = event.target.closest('tr');
+
+    const quantitySpan = tr.querySelector('.products-table__quantity');
+
+    if(quantitySpan.textContent == '1') {
+        return;
+    }
+
+    const unitPrice = convertToPoint(
+        tr.querySelector('.unit_price').textContent
+    );
+
+    const total = price - unitPrice;
+
+    price = roundToNearest(total, 2);
+
+    const totalPrice = tr.querySelector('.total_price');
+
+    totalPrice.textContent = convertToComma(
+        convertToPoint(totalPrice.textContent) - unitPrice
+    );
+
+    const newQuantity = parseInt(quantitySpan.textContent) - 1;
+
+    quantitySpan.textContent = newQuantity;
+
+    --quantity;
+
+    updateTotals();
+}
 
 //Função para adicionar mais um do mesmo produto.
 function increaseQuantity(event) {
