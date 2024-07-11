@@ -26,6 +26,13 @@ async function sendRequest(path, response) { /*função criada aqui para poder r
     }
 }
 
+//Melhora o arredondamento do JavaScript
+// para não apresentar dados errados.
+function roundToNearest(value, precision) {
+    const factor = Math.pow(10, precision);
+    return Math.round(value * factor) / factor;
+}
+
 //Converte de casa flutuante para vírgula.
 function convertToComma(value) {
     return `R$ ${value.toFixed(2).replace('.', ',')}`;
@@ -103,7 +110,8 @@ function removeProduct(event) {
 
     const totalProduct = convertToPoint(tr.querySelector('.total_price').textContent);
 
-    price -= totalProduct;
+    const total = price - totalProduct;
+    price = roundToNearest(total, 2);
 
     updateTotals();
 
