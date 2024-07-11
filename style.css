@@ -165,6 +165,7 @@ body { /*corpo*/
         position: sticky;
         position: -webkit-sticky;
         left: 0;
+        z-index: 3;
     }
 
     .products-table__cell:first-child {
@@ -172,7 +173,7 @@ body { /*corpo*/
         position: -webkit-sticky;
         left: 0;
         padding: 0;
-        z-index: 3;
+        z-index: 1;
     }
 
     .products-table__figure {
