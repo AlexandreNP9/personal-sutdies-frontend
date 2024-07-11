@@ -71,7 +71,7 @@ function addProducts() {
 
                     <td class="products-table__cell">${product.name}</td>
 
-                    <td class="products-table__cell">${convertToComma(product.unitPrice)}</td>
+                    <td class="products-table__cell unit_price">${convertToComma(product.unitPrice)}</td>
 
                     <td class="products-table__cell total_price">${convertToComma(product.unitPrice * product.quantity)}</td>
 
@@ -94,6 +94,9 @@ function addProducts() {
 
             price += product.unitPrice * product.quantity;
 
+            const increaseButton = tr.querySelector('.button--increment');
+            increaseButton.addEventListener('click', increaseQuantity);
+
             const deleteButton = tr.querySelector('.button--delete');
             deleteButton.addEventListener('click', removeProduct);
         });
@@ -101,6 +104,35 @@ function addProducts() {
         updateTotals();
     });
 };
+
+//Função para adicionar mais um do mesmo produto.
+function increaseQuantity(event) {
+    const tr = event.target.closest('tr');
+
+    const quantitySpan = tr.querySelector('.products-table__quantity');
+
+    const unitPrice = convertToPoint(
+        tr.querySelector('.unit_price').textContent
+    );
+
+    const total = price + unitPrice;
+
+    price = roundToNearest(total, 2);
+
+    const totalPrice = tr.querySelector('.total_price');
+
+    const value = convertToPoint(totalPrice.textContent) + unitPrice;
+
+    totalPrice.textContent = convertToComma(value);
+
+    const newQuantity = parseInt(quantitySpan.textContent) + 1;
+
+    quantitySpan.textContent = newQuantity;
+
+    ++quantity;
+
+    updateTotals();
+}
 
 //Função para remover um produto.
 function removeProduct(event) {
