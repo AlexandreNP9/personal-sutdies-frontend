@@ -31,6 +31,13 @@ function convertToComma(value) {
     return `R$ ${value.toFixed(2).replace('.', ',')}`;
 }
 
+//Converte para casa flutuante para ponto.
+function convertToPoint(value) {
+    let string = value.replace('R$', '');
+
+    return parseFloat(string.replace(',', '.'));
+}
+
 //Atualiza os valores totais.
 function updateTotals() {
     totalQuantity.textContent = quantity;
@@ -59,7 +66,7 @@ function addProducts() {
 
                     <td class="products-table__cell">${convertToComma(product.unitPrice)}</td>
 
-                    <td class="products-table__cell">${convertToComma(product.unitPrice * product.quantity)}</td>
+                    <td class="products-table__cell total_price">${convertToComma(product.unitPrice * product.quantity)}</td>
 
                     <td class="products-table__cell center">
                         <button class="products-table__button button--decrement">-</button>
@@ -72,7 +79,6 @@ function addProducts() {
                             delete
                         </button>
                     </td>
-                </tr>
             `;
 
             tbody.appendChild(tr);
@@ -80,10 +86,28 @@ function addProducts() {
             quantity += parseInt(product.quantity);
 
             price += product.unitPrice * product.quantity;
+
+            const deleteButton = tr.querySelector('.button--delete');
+            deleteButton.addEventListener('click', removeProduct);
         });
 
         updateTotals();
     });
+};
+
+//Função para remover um produto.
+function removeProduct(event) {
+    const tr = event.target.closest('tr');
+
+    quantity -= parseInt(tr.querySelector('.products-table__quantity').textContent);
+
+    const totalProduct = convertToPoint(tr.querySelector('.total_price').textContent);
+
+    price -= totalProduct;
+
+    updateTotals();
+
+    tbody.removeChild(tr);
 }
 
 addProducts(); /*assim que abre a página, já é feita a chamada dessa função*/
