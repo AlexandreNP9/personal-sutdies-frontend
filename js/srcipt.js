@@ -90,7 +90,7 @@ function addProducts() {
 
             tbody.appendChild(tr);
 
-            quantity += parseInt(product.quantity);
+            quantity++;
 
             price += product.unitPrice * product.quantity;
 
@@ -118,6 +118,13 @@ function reduceQuantity(event) {
         return;
     }
 
+    const increaseQuantity = tr.querySelector('.button--increment');
+
+    if(increaseQuantity.style) {
+        increaseQuantity.disabled = false;
+        increaseQuantity.removeAttribute('style');
+    }
+
     const unitPrice = convertToPoint(
         tr.querySelector('.unit_price').textContent
     );
@@ -143,6 +150,9 @@ function reduceQuantity(event) {
 
 //Função para adicionar mais um do mesmo produto.
 function increaseQuantity(event) {
+    const button = event.target;
+    button.disabled = true;
+
     const tr = event.target.closest('tr');
 
     const quantitySpan = tr.querySelector('.products-table__quantity');
@@ -168,6 +178,20 @@ function increaseQuantity(event) {
     ++quantity;
 
     updateTotals();
+
+    sendRequest(`products/stock/${tr.id}.json`, (data) => {
+        const stock = parseInt(data.stock);
+        
+        button.disabled = false;
+
+        if(parseInt(quantitySpan.textContent) > stock) {
+            reduceQuantity(event);
+            button.disabled = true;
+            button.style.color = '#c9c9c9';
+            button.style.setProperty('background', 'transparent', 'important');
+            return;
+        }
+    });
 }
 
 //Função para remover um produto.

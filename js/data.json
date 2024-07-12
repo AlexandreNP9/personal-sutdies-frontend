@@ -1,0 +1,139 @@
+{
+    "products": [ 
+        {
+            "id": "product1",
+            "image":"./images/product_01.png",
+            "name": "Smart TV 42",
+            "quantity": 1,
+            "unitPrice": 1739.00,
+            "stock": 10
+        },
+        {
+            "id": "product2",
+            "image":"./images/product_02.png",
+            "name": "Smartphone 5G 128gb",
+            "quantity": 1,
+            "unitPrice": 1305.62,
+            "stock": 5
+        },
+        {
+            "id": "product3",
+            "image":"./images/product_03.png",
+            "name": "Kit com 2 patinhos de borracha",
+            "quantity": 1,
+            "unitPrice": 5.00,
+            "stock": 15
+        },
+        {
+            "id": "product4",
+            "image":"./images/product_04.png",
+            "name": "Pião de corda",
+            "quantity": 1,
+            "unitPrice": 42.20,
+            "stock": 25
+        },
+        {
+            "id": "product5",
+            "image":"./images/product_05.png",
+            "name": "Cubo mágico - cores",
+            "quantity": 1,
+            "unitPrice": 20.00,
+            "stock": 8
+        },
+        {
+            "id": "product6",
+            "image":"./images/product_06.png",
+            "name": "Joystick Joypad Controle",
+            "quantity": 1,
+            "unitPrice": 279.50,
+            "stock": 3
+        },
+        {
+            "id": "product7",
+            "image":"./images/product_07.png",
+            "name": "Pen Drive",
+            "quantity": 1,
+            "unitPrice": 34.90,
+            "stock": 2
+        },
+        {
+            "id": "product8",
+            "image":"./images/product_08.jpg",
+            "name": "Lápis de cor",
+            "quantity": 1,
+            "unitPrice": 17.00,
+            "stock": 5
+        },
+        {
+            "id": "product9",
+            "image":"./images/product_09.jpg",
+            "name": "Caderno",
+            "quantity": 1,
+            "unitPrice": 29.40,
+            "stock": 6
+        },
+        {
+            "id": "product10",
+            "image":"./images/product_10.jpg",
+            "name": "Kit 100 prendedores de roupas",
+            "quantity": 1,
+            "unitPrice": 28.99,
+            "stock": 10
+        },
+        {
+            "id": "product11",
+            "image":"./images/product_11.png",
+            "name": "Panela inox",
+            "quantity": 1,
+            "unitPrice": 15.80,
+            "stock": 18
+        },
+        {
+            "id": "product12",
+            "image":"./images/product_12.jpg",
+            "name": "Conjunto 5 canecas cores",
+            "quantity": 1,
+            "unitPrice": 8.00,
+            "stock": 12
+        },
+        {
+            "id": "product13",
+            "image":"./images/product_13.jpg",
+            "name": "Despertador a corda",
+            "quantity": 1,
+            "unitPrice": 80.76,
+            "stock": 11
+        },
+        {
+            "id": "product14",
+            "image":"./images/product_14.png",
+            "name": "Bule de café inox",
+            "quantity": 1,
+            "unitPrice": 3409.00,
+            "stock": 7
+        },
+        {
+            "id": "product15",
+            "image":"./images/product_15.jpg",
+            "quantity": 1,
+            "unitPrice": 48.00,
+            "stock": 6
+        },
+        {
+            "id": "product16",
+            "image":"./images/product_16.jpg",
+            "name": "4 Vasos para plantas",
+            "quantity": 1,
+            "unitPrice": 169.90,
+            "stock": 4
+        },
+        {
+            "id": "product17",
+            "image":"./images/product_17.jpg",
+            "name": "Lata porta mantimentos de metal",
+            "quantity": 1,
+            "unitPrice": 34.90,
+            "stock": 2
+        }
+    ]
+}
