@@ -186,4 +186,27 @@ function removeProduct(event) {
     tbody.removeChild(tr);
 }
 
+//Funçã para finalizar a compra.
+function sendProducts() {
+    const tableRows = document.querySelectorAll('.products__table tr');
+    const data = [];
+
+    tableRows.forEach((tableRow, counter) => {
+        if (counter === 0) return;
+
+        const value = {};
+        value.id = tableRow.id;
+        value.quantity = tableRow.querySelector('.products-table__quantity').textContent;
+
+        data.push(value);
+    });
+
+    const json = JSON.stringify(data);
+
+    console.log(json);
+}
+
+const sendButton = document.querySelector('.send__button');
+sendButton.addEventListener('click', sendProducts);
+
 addProducts(); /*assim que abre a página, já é feita a chamada dessa função*/
